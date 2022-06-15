@@ -2,7 +2,7 @@ const database = require("./db.users");
 const bcrypt = require("bcrypt");
 const constantNumber = 10;
 
-async function saveUser(request, response) {
+async function signUp(request, response) {
   const newUser = request.body;
   const users = database.getUsers();
   const sameUser = users.find((u) => u.userName === newUser.userName);
@@ -23,5 +23,5 @@ async function saveUser(request, response) {
 }
 
 module.exports = {
-  saveUser,
+  signUp,
 };
