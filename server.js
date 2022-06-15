@@ -9,7 +9,7 @@ app.post("/quotes", apiQuotes.saveQuote);
 app.get("/quotes/:quoteId", apiQuotes.getQuoteById);
 app.put("/quotes/:quoteId", apiQuotes.editQuote);
 app.delete("/quotes/:quoteId", apiQuotes.deleteQuote);
-app.post("/signup", apiUsers.signUp);
+app.post("/users", apiUsers.saveUser);
 
 // SERVER
 const port = 3000;
